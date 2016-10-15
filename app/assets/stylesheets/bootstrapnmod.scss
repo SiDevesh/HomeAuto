@@ -1,0 +1,6 @@
+$grid-float-breakpoint: 0px;  //to prevent navbar-collapse
+ 
+//add custom css above this line
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
