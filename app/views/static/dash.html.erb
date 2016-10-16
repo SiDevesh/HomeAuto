@@ -33,7 +33,7 @@
             <p><%= @value.light_status ? "Switch off if not in use." : "Saving energy is good." %></p>
         </div>
         <footer class="card-footer">
-            <button class="btn btn-flat">Share</button>
+            <%= link_to @value.light_status ? "Turn OFF" : "Turn ON", switcher_path(@value.light_status ? "off" : "on"), :class => "btn btn-flat" %>
             <%= link_to 'More Info', lightings_path, :class => "btn btn-flat btn-warning" %>
         </footer>
     </div>

@@ -17,6 +17,18 @@ class LightingApiController < ApplicationController
 		end
 	end
 
+	def post_status_web
+		if params[:status] == "on"
+			@value.light_status = true
+			@value.save
+			redirect_to root_path
+		else
+			@value.light_status = "off"
+			@value.save
+			redirect_to root_path
+		end
+	end
+
 	private
 
 	def set_value
